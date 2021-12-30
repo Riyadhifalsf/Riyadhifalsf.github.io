@@ -15,22 +15,32 @@ body{
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url(bg.jpg) no-repeat;
+  background-color: #5E0DE0;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 100px;
+  display: flex;
+  flex-direction: column; 
 }
 
 .section-main h1{
+  padding: 1rem 2rem;
   font-size: 60px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 80px;
   color: rgba(255, 255, 255, 0.5);
+  border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.section-main p {
+  margin-top: 1.5rem;
+  width: 50%;
+  color: white;
 }
 
 header{
@@ -47,7 +57,7 @@ header{
 }
 
 header.sticky{
-  background-color: #c50e1a;
+  background-color: #4a0fa8;
   padding: 15px 100px;
 }
 
@@ -60,6 +70,10 @@ header .brand{
   letter-spacing: 2px;
 }
 
+header .brand:hover {
+  color: rgb(192, 192, 192);
+}
+
 header .menu{
   position: relative;
   display: flex;
@@ -67,16 +81,16 @@ header .menu{
   align-items: center;
 }
 
-header .menu a{
+header .menu a {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   color: #fff;
-  margin: 0 30px;
+  margin: 0 5px;
   padding: 5px 15px;
   text-transform: uppercase;
   border-radius: 15px;
-  transition: 0.3s;
+  transition: 0.5s;
   transition-property: color, background;
 }
 
@@ -84,21 +98,22 @@ header .menu a:hover{
   color: #000;
   background: #fff;
 }
-
 header .btn{
   font-size: 25px;
   cursor: pointer;
   color: #fff;
   display: none;
 }
-
-.section-two {
+.latest-blog {
   min-height: 100vh;
   background: #222;
   padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
 }
 
-.section-two h2{
+.latest-blog h2{
+  text-align: center;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -106,11 +121,103 @@ header .btn{
   color: rgba(255, 255, 255, 0.8);
 }
 
-.section-two p {
-  font-size: 18px;
-  margin: 30px 0;
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-latest {
+  color: white;
+  width: 33%;
+  padding-bottom: 1rem;
+}
+
+.box-latest .judul-blog {
+  font-size: 30px;
+}
+
+.box-latest .caption {
   color: rgba(255, 255, 255, 0.5);
 }
+
+.box-latest .judul-blog,
+.box-latest .caption {
+  padding: 0 1.2rem;
+  width: 100%;
+}
+
+.kotak {
+  width: 20rem;
+  height: 13rem;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 10px;
+}
+
+footer {
+  height: 50vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section h3 {
+  color: white;
+}
+
+.navigasi ul {
+  list-style: none;
+
+}
+.navigasi ul li a {
+  text-decoration: none;
+  color: rgb(189, 189, 189);
+}
+.navigasi ul li a:hover {
+  color: rgb(151, 151, 151);
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  color: rgb(189, 189, 189);
+}
+
+.contact .fas {
+  margin-right: 15px;
+}
+
+.socials {
+  display: flex;
+
+}
+.socials .item {
+  background-color: rgb(255, 255, 255, .3);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials .fab {
+  font-size: 30px;
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+}
+
+
+
+
 
 @media (max-width: 1024px) {
   header .btn{
